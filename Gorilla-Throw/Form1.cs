@@ -14,10 +14,14 @@ namespace Gorilla_Throw
     {
         System.Media.SoundPlayer boom = new System.Media.SoundPlayer(Properties.Resources.boom);
         Random random = new Random();
+        int score = 0;
+        int hits = 0;
+        int misses = 0;
 
         public Form1()
         {
             InitializeComponent();
+            pictureBox1.Location = coord(0, 0);
         }
 
         private Point coord(double x, double y)
@@ -62,18 +66,21 @@ namespace Gorilla_Throw
             pictureBox1.Location = coord(x, y);
             do
             {
-                await Task.Delay(100);
+                await Task.Delay(50);
                 x = x + vx * t;
                 y = y + vy * t + 0.5 * a * t * t;
                 vy = vy + a * t;
                 pictureBox1.Location = coord(x, y);
             } while (y > 0 && !collide(pictureBox1,pictureBox2));
             if (y < 0)
+            {
                 pictureBox1.Location = coord(x - vx * t, 0);
+                miss();
+            }
             else
             {
+                hit();
                 pictureBox2.Image = Properties.Resources.explosion;
-                //pictureBox2.BackColor = Color.Transparent;
                 boom.Play();
                 await Task.Delay(1500);
                 pictureBox2.Location = coord(random.NextDouble(), random.NextDouble());
@@ -87,6 +94,26 @@ namespace Gorilla_Throw
         bool collide (PictureBox p1, PictureBox p2)
         {
             return p1.Bounds.IntersectsWith(p2.Bounds);
+        }
+
+        void hit()
+        {
+            hits++;
+            updateScore();
+        }
+
+        void miss()
+        {
+            misses++;
+            updateScore();
+        }
+
+        void updateScore()
+        {
+            score = hits * 10 - misses * 5;
+            lblScore.Text = "Hits: " + hits +
+                "\nMisses: " + misses +
+                "\nScore: " + score;
         }
     }
 }
