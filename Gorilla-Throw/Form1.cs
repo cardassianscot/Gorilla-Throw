@@ -14,9 +14,10 @@ namespace Gorilla_Throw
     {
         System.Media.SoundPlayer boom = new System.Media.SoundPlayer(Properties.Resources.boom);
         Random random = new Random();
-        int score = 0;
+        public int score = 0;
         int hits = 0;
         int misses = 0;
+        int attempts = 0;
 
         public Form1()
         {
@@ -64,14 +65,14 @@ namespace Gorilla_Throw
             }
 
             pictureBox1.Location = coord(x, y);
-            do
+            while (y >= 0 && !collide(pictureBox1, pictureBox2))
             {
                 await Task.Delay(50);
                 x = x + vx * t;
                 y = y + vy * t + 0.5 * a * t * t;
                 vy = vy + a * t;
                 pictureBox1.Location = coord(x, y);
-            } while (y > 0 && !collide(pictureBox1,pictureBox2));
+            }
             if (y < 0)
             {
                 pictureBox1.Location = coord(x - vx * t, 0);
@@ -85,6 +86,13 @@ namespace Gorilla_Throw
                 await Task.Delay(1500);
                 pictureBox2.Location = coord(random.NextDouble(), random.NextDouble());
                 pictureBox2.Image = Properties.Resources.monkey_selfie;
+            }
+
+            attempts++;
+            if (attempts == 10)
+            {
+                MessageBox.Show("Game Over\nScore " + score);
+                Close();
             }
 
             button2.Enabled = true;
