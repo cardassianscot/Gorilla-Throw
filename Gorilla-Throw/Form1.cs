@@ -19,10 +19,32 @@ namespace Gorilla_Throw
         int misses = 0;
         int attempts = 0;
 
+        List<Image> bananas = new List<Image>();
+
         public Form1()
         {
             InitializeComponent();
             pictureBox1.Location = coord(0, 0);
+            bananas.Add(Properties.Resources.banana1);
+            bananas.Add(Properties.Resources.banana2);
+            bananas.Add(Properties.Resources.banana3);
+            bananas.Add(Properties.Resources.banana4);
+            bananas.Add(Properties.Resources.banana5);
+            bananas.Add(Properties.Resources.banana6);
+            bananas.Add(Properties.Resources.banana7);
+            bananas.Add(Properties.Resources.banana8);
+            bananas.Add(Properties.Resources.banana9);
+            bananas.Add(Properties.Resources.banana10);
+            bananas.Add(Properties.Resources.banana11);
+            bananas.Add(Properties.Resources.banana12);
+            bananas.Add(Properties.Resources.banana13);
+            bananas.Add(Properties.Resources.banana14);
+            bananas.Add(Properties.Resources.banana15);
+            bananas.Add(Properties.Resources.banana16);
+            bananas.Add(Properties.Resources.banana17);
+            bananas.Add(Properties.Resources.banana18);
+            bananas.Add(Properties.Resources.banana19);
+            bananas.Add(Properties.Resources.banana20);
         }
 
         private Point coord(double x, double y)
@@ -52,6 +74,9 @@ namespace Gorilla_Throw
             double vy = 0.12;
             double a = -0.01;
             double t = 1;
+
+            int frame = 0;
+
             try
             {
                 double θ = double.Parse(textBox1.Text);
@@ -72,6 +97,8 @@ namespace Gorilla_Throw
                 y = y + vy * t + 0.5 * a * t * t;
                 vy = vy + a * t;
                 pictureBox1.Location = coord(x, y);
+                frame = (frame + 1) % bananas.Count;
+                pictureBox1.Image = bananas[frame];
             }
             if (y < 0)
             {

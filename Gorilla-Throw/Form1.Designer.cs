@@ -30,9 +30,9 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblScore = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,16 @@
             this.textBox1.Size = new System.Drawing.Size(100, 38);
             this.textBox1.TabIndex = 3;
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(874, 24);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(203, 55);
+            this.lblScore.TabIndex = 5;
+            this.lblScore.Text = "Score: 0";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -67,23 +77,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Gorilla_Throw.Properties.Resources.playing_football_500x500;
+            this.pictureBox1.Image = global::Gorilla_Throw.Properties.Resources.banana1;
             this.pictureBox1.Location = new System.Drawing.Point(566, 404);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(148, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblScore
-            // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(874, 24);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(203, 55);
-            this.lblScore.TabIndex = 5;
-            this.lblScore.Text = "Score: 0";
             // 
             // Form1
             // 

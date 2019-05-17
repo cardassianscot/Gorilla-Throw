@@ -104,5 +104,65 @@
   <ItemGroup>
     <None Include="Resources\explosion.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana20.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
