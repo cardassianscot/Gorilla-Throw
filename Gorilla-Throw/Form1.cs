@@ -123,6 +123,7 @@ namespace Gorilla_Throw
                 Close();
             }
 
+            pBoxBanana.Location = coord(0, 0);
             button2.Enabled = true;
 
         }
