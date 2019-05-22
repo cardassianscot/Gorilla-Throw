@@ -31,10 +31,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblScore = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pboxMonkey = new System.Windows.Forms.PictureBox();
+            this.pBoxBanana = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMonkey)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxBanana)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -64,26 +64,26 @@
             this.lblScore.TabIndex = 5;
             this.lblScore.Text = "Score: 0";
             // 
-            // pictureBox2
+            // pboxMonkey
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Gorilla_Throw.Properties.Resources.monkey_selfie;
-            this.pictureBox2.Location = new System.Drawing.Point(664, 75);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(141, 214);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pboxMonkey.BackColor = System.Drawing.Color.Transparent;
+            this.pboxMonkey.Image = global::Gorilla_Throw.Properties.Resources.monkey_selfie;
+            this.pboxMonkey.Location = new System.Drawing.Point(664, 75);
+            this.pboxMonkey.Name = "pboxMonkey";
+            this.pboxMonkey.Size = new System.Drawing.Size(141, 214);
+            this.pboxMonkey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxMonkey.TabIndex = 4;
+            this.pboxMonkey.TabStop = false;
             // 
-            // pictureBox1
+            // pBoxBanana
             // 
-            this.pictureBox1.Image = global::Gorilla_Throw.Properties.Resources.banana1;
-            this.pictureBox1.Location = new System.Drawing.Point(566, 404);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pBoxBanana.Image = global::Gorilla_Throw.Properties.Resources.banana1;
+            this.pBoxBanana.Location = new System.Drawing.Point(566, 404);
+            this.pBoxBanana.Name = "pBoxBanana";
+            this.pBoxBanana.Size = new System.Drawing.Size(148, 144);
+            this.pBoxBanana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxBanana.TabIndex = 0;
+            this.pBoxBanana.TabStop = false;
             // 
             // Form1
             // 
@@ -92,14 +92,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1767, 1174);
             this.Controls.Add(this.lblScore);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pboxMonkey);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pBoxBanana);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMonkey)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxBanana)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,10 +107,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pBoxBanana;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pboxMonkey;
         private System.Windows.Forms.Label lblScore;
     }
 }
