@@ -288,5 +288,15 @@ namespace Gorilla_Throw.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NIGHT_SKY_WALLPAPER {
+            get {
+                object obj = ResourceManager.GetObject("NIGHT-SKY-WALLPAPER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

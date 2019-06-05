@@ -31,17 +31,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblScore = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pboxMonkey = new System.Windows.Forms.PictureBox();
             this.pBoxBanana = new System.Windows.Forms.PictureBox();
+            this.pboxBackground = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMonkey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxBanana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(196, 456);
+            this.button2.Location = new System.Drawing.Point(342, 277);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 92);
+            this.button2.Size = new System.Drawing.Size(82, 39);
             this.button2.TabIndex = 2;
             this.button2.Text = "Fire";
             this.button2.UseVisualStyleBackColor = true;
@@ -49,28 +53,40 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 456);
+            this.textBox1.Location = new System.Drawing.Point(384, 238);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(1);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 38);
+            this.textBox1.Size = new System.Drawing.Size(40, 20);
             this.textBox1.TabIndex = 3;
             // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(874, 24);
+            this.lblScore.Location = new System.Drawing.Point(328, 10);
+            this.lblScore.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(203, 55);
+            this.lblScore.Size = new System.Drawing.Size(80, 24);
             this.lblScore.TabIndex = 5;
             this.lblScore.Text = "Score: 0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(339, 241);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Angle";
             // 
             // pboxMonkey
             // 
             this.pboxMonkey.BackColor = System.Drawing.Color.Transparent;
             this.pboxMonkey.Image = global::Gorilla_Throw.Properties.Resources.monkey_selfie;
-            this.pboxMonkey.Location = new System.Drawing.Point(664, 75);
+            this.pboxMonkey.Location = new System.Drawing.Point(249, 31);
+            this.pboxMonkey.Margin = new System.Windows.Forms.Padding(1);
             this.pboxMonkey.Name = "pboxMonkey";
-            this.pboxMonkey.Size = new System.Drawing.Size(141, 214);
+            this.pboxMonkey.Size = new System.Drawing.Size(53, 78);
             this.pboxMonkey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxMonkey.TabIndex = 4;
             this.pboxMonkey.TabStop = false;
@@ -78,28 +94,43 @@
             // pBoxBanana
             // 
             this.pBoxBanana.Image = global::Gorilla_Throw.Properties.Resources.banana1;
-            this.pBoxBanana.Location = new System.Drawing.Point(566, 404);
+            this.pBoxBanana.Location = new System.Drawing.Point(9, 277);
+            this.pBoxBanana.Margin = new System.Windows.Forms.Padding(0);
             this.pBoxBanana.Name = "pBoxBanana";
-            this.pBoxBanana.Size = new System.Drawing.Size(148, 144);
+            this.pBoxBanana.Size = new System.Drawing.Size(36, 39);
             this.pBoxBanana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBoxBanana.TabIndex = 0;
             this.pBoxBanana.TabStop = false;
             // 
+            // pboxBackground
+            // 
+            this.pboxBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pboxBackground.Location = new System.Drawing.Point(9, 10);
+            this.pboxBackground.Margin = new System.Windows.Forms.Padding(0);
+            this.pboxBackground.Name = "pboxBackground";
+            this.pboxBackground.Size = new System.Drawing.Size(315, 306);
+            this.pboxBackground.TabIndex = 6;
+            this.pboxBackground.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1767, 1174);
+            this.ClientSize = new System.Drawing.Size(452, 328);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pboxMonkey);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pBoxBanana);
+            this.Controls.Add(this.pboxBackground);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pboxMonkey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxBanana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +143,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pboxMonkey;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.PictureBox pboxBackground;
+        private System.Windows.Forms.Label label1;
     }
 }
 

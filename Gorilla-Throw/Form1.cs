@@ -24,6 +24,7 @@ namespace Gorilla_Throw
         public Form1()
         {
             InitializeComponent();
+
             pBoxBanana.Location = coord(0, 0);
             bananas.Add(Properties.Resources.banana1);
             bananas.Add(Properties.Resources.banana2);
@@ -45,12 +46,22 @@ namespace Gorilla_Throw
             bananas.Add(Properties.Resources.banana18);
             bananas.Add(Properties.Resources.banana19);
             bananas.Add(Properties.Resources.banana20);
+
+            pboxBackground.Controls.Add(pBoxBanana);
+            pboxBackground.Controls.Add(pboxMonkey);
         }
 
         private Point coord(double x, double y)
         {
-            int X = (int)(x * (ClientRectangle.Width - pBoxBanana.Width));
-            int Y = (int)((1 - y) * (ClientRectangle.Height - pBoxBanana.Height));
+            int X = (int)(x * (pboxBackground.Width - pBoxBanana.Width));
+            int Y = (int)((1 - y) * (pboxBackground.Height - pBoxBanana.Height));
+            return new Point(X, Y);
+        }
+
+        private Point coordMonkey(double x, double y)
+        {
+            int X = (int)(x * (pboxBackground.Width - pboxMonkey.Width));
+            int Y = (int)((1 - y) * (pboxBackground.Height - pboxMonkey.Height));
             return new Point(X, Y);
         }
 
@@ -91,7 +102,7 @@ namespace Gorilla_Throw
 
             pBoxBanana.Location = coord(x, y);
             //while (y >= 0 && !collide(pBoxBanana, pboxMonkey))
-            while (ClientRectangle.Contains(pBoxBanana.Bounds) && !collide(pBoxBanana, pboxMonkey))
+            while (pboxBackground.Bounds.IntersectsWith(pBoxBanana.Bounds) && !collide(pBoxBanana, pboxMonkey))
             {
                 await Task.Delay(50);
                 x = x + vx * t;
@@ -107,7 +118,7 @@ namespace Gorilla_Throw
                 pboxMonkey.Image = Properties.Resources.explosion;
                 boom.Play();
                 await Task.Delay(1500);
-                pboxMonkey.Location = coord(random.NextDouble(), random.NextDouble());
+                pboxMonkey.Location = coordMonkey(random.NextDouble(), random.NextDouble());
                 pboxMonkey.Image = Properties.Resources.monkey_selfie;
             }
             else
