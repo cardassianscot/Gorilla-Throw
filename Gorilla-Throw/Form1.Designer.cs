@@ -35,6 +35,8 @@
             this.pboxMonkey = new System.Windows.Forms.PictureBox();
             this.pBoxBanana = new System.Windows.Forms.PictureBox();
             this.pboxBackground = new System.Windows.Forms.PictureBox();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMonkey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxBanana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).BeginInit();
@@ -43,7 +45,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(342, 277);
-            this.button2.Margin = new System.Windows.Forms.Padding(1);
+            this.button2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(82, 39);
             this.button2.TabIndex = 2;
@@ -54,7 +56,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(384, 238);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(1);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(40, 20);
             this.textBox1.TabIndex = 3;
@@ -83,10 +85,10 @@
             // 
             this.pboxMonkey.BackColor = System.Drawing.Color.Transparent;
             this.pboxMonkey.Image = global::Gorilla_Throw.Properties.Resources.monkey_selfie;
-            this.pboxMonkey.Location = new System.Drawing.Point(249, 31);
-            this.pboxMonkey.Margin = new System.Windows.Forms.Padding(1);
+            this.pboxMonkey.Location = new System.Drawing.Point(235, 31);
+            this.pboxMonkey.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.pboxMonkey.Name = "pboxMonkey";
-            this.pboxMonkey.Size = new System.Drawing.Size(53, 78);
+            this.pboxMonkey.Size = new System.Drawing.Size(43, 70);
             this.pboxMonkey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxMonkey.TabIndex = 4;
             this.pboxMonkey.TabStop = false;
@@ -112,12 +114,33 @@
             this.pboxBackground.TabIndex = 6;
             this.pboxBackground.TabStop = false;
             // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(370, 55);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(45, 131);
+            this.vScrollBar1.TabIndex = 8;
+            this.vScrollBar1.Value = 50;
+            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.VScrollBar1_Scroll);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(340, 203);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "velocity = 0.13";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(452, 328);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.pboxMonkey);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblScore);
@@ -125,7 +148,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pBoxBanana);
             this.Controls.Add(this.pboxBackground);
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pboxMonkey)).EndInit();
@@ -145,6 +168,8 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.PictureBox pboxBackground;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

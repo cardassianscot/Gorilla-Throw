@@ -18,6 +18,7 @@ namespace Gorilla_Throw
         int hits = 0;
         int misses = 0;
         int attempts = 0;
+        double v = 0.13;
 
         List<Image> bananas = new List<Image>();
 
@@ -91,8 +92,8 @@ namespace Gorilla_Throw
             try
             {
                 double θ = double.Parse(textBox1.Text);
-                vx = 0.13 * cos(θ);
-                vy = 0.13 * sin(θ);
+                vx = v * cos(θ);
+                vy = v * sin(θ);
             }
             catch
             {
@@ -117,9 +118,11 @@ namespace Gorilla_Throw
                 hit();
                 pboxMonkey.Image = Properties.Resources.explosion;
                 boom.Play();
+                pBoxBanana.Visible = false;
                 await Task.Delay(1500);
                 pboxMonkey.Location = coordMonkey(random.NextDouble(), random.NextDouble());
                 pboxMonkey.Image = Properties.Resources.monkey_selfie;
+                pBoxBanana.Visible = true;
             }
             else
             {
@@ -162,6 +165,12 @@ namespace Gorilla_Throw
             lblScore.Text = "Hits: " + hits +
                 "\nMisses: " + misses +
                 "\nScore: " + score;
+        }
+
+        private void VScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            v = (100.0 - vScrollBar1.Value) / 100.0 * 0.26;
+            label2.Text = "velocity = " + v.ToString("0.00");
         }
     }
 }
