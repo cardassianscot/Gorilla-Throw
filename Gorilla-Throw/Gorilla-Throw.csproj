@@ -167,5 +167,14 @@
   <ItemGroup>
     <None Include="Resources\NIGHT-SKY-WALLPAPER.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DonkeyKong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-Donkey_Kong_character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splat.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

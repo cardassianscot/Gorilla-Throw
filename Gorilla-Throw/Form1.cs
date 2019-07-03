@@ -49,7 +49,7 @@ namespace Gorilla_Throw
             bananas.Add(Properties.Resources.banana20);
 
             pboxBackground.Controls.Add(pBoxBanana);
-            pboxBackground.Controls.Add(pboxMonkey);
+            pboxBackground.Controls.Add(pBoxDK);
         }
 
         private Point coord(double x, double y)
@@ -61,8 +61,8 @@ namespace Gorilla_Throw
 
         private Point coordMonkey(double x, double y)
         {
-            int X = (int)(x * (pboxBackground.Width - pboxMonkey.Width));
-            int Y = (int)((1 - y) * (pboxBackground.Height - pboxMonkey.Height));
+            int X = (int)(x * (pboxBackground.Width - pBoxDK.Width));
+            int Y = (int)((1 - y) * (pboxBackground.Height - pBoxDK.Height));
             return new Point(X, Y);
         }
 
@@ -85,7 +85,8 @@ namespace Gorilla_Throw
             double vx = 0.04;
             double vy = 0.12;
             double a = -0.01;
-            double t = 1;
+            double t = 0.2;
+            int pause = (int)(50 * t);
 
             int frame = 0;
 
@@ -103,9 +104,9 @@ namespace Gorilla_Throw
 
             pBoxBanana.Location = coord(x, y);
             //while (y >= 0 && !collide(pBoxBanana, pboxMonkey))
-            while (pboxBackground.Bounds.IntersectsWith(pBoxBanana.Bounds) && !collide(pBoxBanana, pboxMonkey))
+            while (pboxBackground.Bounds.IntersectsWith(pBoxBanana.Bounds) && !collide(pBoxBanana, pBoxDK))
             {
-                await Task.Delay(50);
+                await Task.Delay(pause);
                 x = x + vx * t;
                 y = y + vy * t + 0.5 * a * t * t;
                 vy = vy + a * t;
@@ -113,15 +114,15 @@ namespace Gorilla_Throw
                 frame = (frame + 1) % bananas.Count;
                 pBoxBanana.Image = bananas[frame];
             }
-            if (collide(pBoxBanana,pboxMonkey))
+            if (collide(pBoxBanana,pBoxDK))
             {
                 hit();
-                pboxMonkey.Image = Properties.Resources.explosion;
+                pBoxDK.Image = Properties.Resources.splat;
                 boom.Play();
                 pBoxBanana.Visible = false;
                 await Task.Delay(1500);
-                pboxMonkey.Location = coordMonkey(random.NextDouble(), random.NextDouble());
-                pboxMonkey.Image = Properties.Resources.monkey_selfie;
+                pBoxDK.Location = coordMonkey(random.NextDouble(), random.NextDouble());
+                pBoxDK.Image = Properties.Resources.DonkeyKong;
                 pBoxBanana.Visible = true;
             }
             else

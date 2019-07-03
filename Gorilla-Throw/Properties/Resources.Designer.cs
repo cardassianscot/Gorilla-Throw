@@ -272,6 +272,16 @@ namespace Gorilla_Throw.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DonkeyKong {
+            get {
+                object obj = ResourceManager.GetObject("DonkeyKong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap explosion {
             get {
                 object obj = ResourceManager.GetObject("explosion", resourceCulture);
@@ -282,9 +292,9 @@ namespace Gorilla_Throw.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap monkey_selfie {
+        internal static System.Drawing.Bitmap NIGHT_SKY_WALLPAPER {
             get {
-                object obj = ResourceManager.GetObject("monkey selfie", resourceCulture);
+                object obj = ResourceManager.GetObject("NIGHT-SKY-WALLPAPER", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -292,9 +302,9 @@ namespace Gorilla_Throw.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NIGHT_SKY_WALLPAPER {
+        internal static System.Drawing.Bitmap splat {
             get {
-                object obj = ResourceManager.GetObject("NIGHT-SKY-WALLPAPER", resourceCulture);
+                object obj = ResourceManager.GetObject("splat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
